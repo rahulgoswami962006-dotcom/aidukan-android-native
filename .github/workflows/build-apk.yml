@@ -1,0 +1,71 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
+    - name: Build Debug APK
+      run: ./gradlew assembleDebug
+      
+    - name: Upload APK
+      uses: actions/upload-artifact@v3
+      with:
+        name: aidukan-debug-apk
+        path: app/build/outputs/apk/debug/app-debug.apk
+        
+    - name: Create Release
+      if: github.ref == 'refs/heads/main'
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: v1.0.${{ github.run_number }}
+        name: Aidukan v1.0.${{ github.run_number }}
+        body: |
+          🎉 Aidukan Android App - Automatic Build
+          
+          ## 📱 Download & Install:
+          1. Download `app-debug.apk` below
+          2. Transfer to your Android phone
+          3. Open and install
+          4. Grant permissions (Microphone, Camera)
+          5. Start using!
+          
+          ## ✨ Features:
+          - 🎤 Voice Assistant with GWTS wake word
+          - 📸 AI Photo Recognition (Gemini Vision)
+          - ⏰ Automated Scheduling
+          - ☁️ Cloud Sync (Supabase)
+          - 🔔 Smart Notifications
+          - 💬 WhatsApp Integration
+          - 📊 Market Insights
+          
+          ## 🔑 Setup Required:
+          After installation, add your API keys:
+          - Gemini AI: https://makersuite.google.com/app/apikey
+          - Supabase: https://supabase.com
+          
+          See SETUP_GUIDE.md for details.
+          
+          Built with ❤️ using Bhindi PRO
+        files: app/build/outputs/apk/debug/app-debug.apk
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
