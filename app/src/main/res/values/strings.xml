@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Aidukan</string>
+    <string name="app_tagline">Smart Kirana Assistant</string>
+    
+    <!-- Voice Assistant -->
+    <string name="voice_tap_to_speak">Tap or Say "GWTS"</string>
+    <string name="voice_listening">Listening…</string>
+    <string name="voice_processing">Processing…</string>
+    <string name="voice_wake_word">GWTS</string>
+    
+    <!-- Navigation -->
+    <string name="nav_news">News</string>
+    <string name="nav_suggestions">Suggestions</string>
+    <string name="nav_shop">Shop</string>
+    
+    <!-- Shop Menu -->
+    <string name="shop_bills">Bills / Invoices</string>
+    <string name="shop_balance_sheet">Balance Sheet</string>
+    <string name="shop_expenses">Expenses</string>
+    <string name="shop_inventory">Stock / Inventory</string>
+    <string name="shop_reports">Reports</string>
+    <string name="shop_customers">Customers / Udhaar</string>
+    <string name="shop_suppliers">Suppliers</string>
+    <string name="shop_add_product">Add Product</string>
+    <string name="shop_sales_summary">Sales Summary</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard_today_sales">Today\'s Sales</string>
+    <string name="dashboard_total_products">Total Products</string>
+    <string name="dashboard_low_stock">Low Stock Alert</string>
+    <string name="dashboard_customers">Customers</string>
+    
+    <!-- Voice Commands Examples -->
+    <string name="voice_example_1">100 rupaye ka Fortune oil bech diya</string>
+    <string name="voice_example_2">2 packet Maggi 28 rupaye mein becha</string>
+    <string name="voice_example_3">Stock check karo Fortune oil</string>
+    <string name="voice_example_4">Aaj ka total sales batao</string>
+    
+    <!-- Permissions -->
+    <string name="permission_microphone">Microphone permission needed for voice commands</string>
+    <string name="permission_camera">Camera permission needed for product photos</string>
+    
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="add">Add</string>
+    <string name="search">Search</string>
+    <string name="rupee_symbol">₹</string>
+</resources>
