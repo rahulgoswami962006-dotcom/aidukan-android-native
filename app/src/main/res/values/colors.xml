@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Aidukan Brand Colors -->
+    <color name="deep_blue">#1A237E</color>
+    <color name="electric_violet">#7C4DFF</color>
+    <color name="fresh_teal">#00BFA5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_gray">#F5F5F5</color>
+    
+    <!-- Material Design Colors -->
+    <color name="primary">@color/deep_blue</color>
+    <color name="primary_dark">#0D1642</color>
+    <color name="accent">@color/electric_violet</color>
+    <color name="secondary">@color/fresh_teal</color>
+    
+    <!-- UI Colors -->
+    <color name="background">#FAFAFA</color>
+    <color name="surface">@color/white</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="divider">#BDBDBD</color>
+    
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
+    
+    <!-- Gradient Colors -->
+    <color name="gradient_start">@color/deep_blue</color>
+    <color name="gradient_middle">@color/fresh_teal</color>
+    <color name="gradient_end">@color/electric_violet</color>
+    
+    <!-- Voice Assistant Colors -->
+    <color name="voice_active_start">@color/fresh_teal</color>
+    <color name="voice_active_end">@color/electric_violet</color>
+    <color name="voice_inactive">#E0E0E0</color>
+</resources>
